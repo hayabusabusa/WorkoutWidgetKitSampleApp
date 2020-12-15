@@ -40,8 +40,10 @@ final class HomeModel: HomeModelProtocol {
                     print(error)
                     return
                 }
-                self?.isAuthorizedSubject.send(isGranted)
-                self?.isLoadingSubject.send(false)
+                DispatchQueue.main.async {
+                    self?.isAuthorizedSubject.send(isGranted)
+                    self?.isLoadingSubject.send(false)
+                }
             }
         case .sharingAuthorized:
             isAuthorizedSubject.send(true)
