@@ -28,14 +28,14 @@ struct HomeScreen: View {
                         if (viewModel.isAuthorized) {
                             InfoView(image: Image(systemName: "checkmark.circle.fill"), color: .blue, headline: "アクセス許可済みです", description: "許可されていることを確認しました")
                         } else {
-                            InfoView(image: Image(systemName: "checkmark.circle.fill"), color: .red, headline: "アクセスが許可されていません", description: "設定アプリからヘルスケアへのアクセスを許可してください")
+                            InfoView(image: Image(systemName: "xmark.circle.fill"), color: .red, headline: "アクセスが許可されていません", description: "設定アプリからヘルスケアへのアクセスを許可してください")
                         }
                     }
                 }
             }
             Spacer()
             Button(action: {
-                
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
             }) {
                 Text(viewModel.isAuthorized ? "認証済みです" : "認証する")
                     .bold()
