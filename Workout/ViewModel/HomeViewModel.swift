@@ -20,8 +20,10 @@ final class HomeViewModel: ObservableObject {
         self.model = model
         
         let isAuthorizedStream = model.isAuthorizedPublisher
+            .subscribe(on: RunLoop.main)
             .assign(to: \.isAuthorized, on: self)
         let isLoadingStream = model.isLoadingPublisher
+            .subscribe(on: RunLoop.main)
             .assign(to: \.isLoading, on: self)
         
         cancellables = [isAuthorizedStream, isLoadingStream]
