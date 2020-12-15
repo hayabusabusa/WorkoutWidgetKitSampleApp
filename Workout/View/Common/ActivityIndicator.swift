@@ -12,7 +12,7 @@ struct ActivityIndicator: UIViewRepresentable {
     typealias UIViewType = UIActivityIndicatorView
     
     @Binding var isAnimating: Bool
-    let style: UIActivityIndicatorView.Style = .medium
+    let style: UIActivityIndicatorView.Style
     
     func makeUIView(context: Context) -> UIActivityIndicatorView {
         return UIActivityIndicatorView(style: style)
