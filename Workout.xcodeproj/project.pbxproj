@@ -20,6 +20,7 @@
 		7184BD6E25868341005C6A5A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7184BD6D25868341005C6A5A /* HealthKit.framework */; };
 		7184BD7325868377005C6A5A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184BD7225868377005C6A5A /* HomeScreen.swift */; };
 		7184BD7D25868398005C6A5A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184BD7C25868398005C6A5A /* HomeViewModel.swift */; };
+		71AE2BCC2588A54B00550180 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		7184BD6D25868341005C6A5A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7184BD7225868377005C6A5A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7184BD7C25868398005C6A5A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				7184BD7225868377005C6A5A /* HomeScreen.swift */,
+				71AE2BCA2588A53A00550180 /* Common */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +201,14 @@
 				7184BD6725868326005C6A5A /* HomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		71AE2BCA2588A53A00550180 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7184BD7325868377005C6A5A /* HomeScreen.swift in Sources */,
+				71AE2BCC2588A54B00550180 /* ActivityIndicator.swift in Sources */,
 				7184BD7D25868398005C6A5A /* HomeViewModel.swift in Sources */,
 				7184BD0525867DA9005C6A5A /* WorkoutApp.swift in Sources */,
 				7184BD6825868326005C6A5A /* HomeModel.swift in Sources */,
