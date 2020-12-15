@@ -6,34 +6,28 @@
 //
 
 import Foundation
+import Combine
 
-// MARK: - Input and Output
-
-protocol HomeViewModelInput {
-    
-}
-
-protocol HomeViewModelOutput {
-    
-}
-
-protocol HomeViewModelType {
-    var input: HomeViewModelInput { get }
-    var output: HomeViewModelOutput { get }
-}
-
-// MARK: - View Model
-
-final class HomeViewModel: HomeViewModelInput, HomeViewModelOutput {
+final class HomeViewModel: ObservableObject {
     
     private let model: HomeModelProtocol
+    private var cancellables: Set<AnyCancellable> = []
+    
+    @Published var isAuthorized: Bool = false
+    @Published var isLoading: Bool = true
     
     init(model: HomeModelProtocol = HomeModel()) {
         self.model = model
+        
+        let isAuthorizedStream = model.isAuthorizedPublisher
+            .assign(to: \.isAuthorized, on: self)
+        let isLoadingStream = model.isLoadingPublisher
+            .assign(to: \.isLoading, on: self)
+        
+        cancellables = [isAuthorizedStream, isLoadingStream]
     }
-}
-
-extension HomeViewModel: HomeViewModelType {
-    var input: HomeViewModelInput { self }
-    var output: HomeViewModelOutput { self }
+    
+    func onAppear() {
+        model.requestAuthorization()
+    }
 }
