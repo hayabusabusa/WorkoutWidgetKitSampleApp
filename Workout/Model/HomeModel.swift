@@ -32,7 +32,8 @@ final class HomeModel: HomeModelProtocol {
     }
     
     func requestAuthorization() {
-        switch healthStore.authorizationStatus(for: HKObjectType.workoutType()) {
+        let status = healthStore.authorizationStatus(for: HKObjectType.workoutType())
+        switch status {
         case .notDetermined:
             let read: Set<HKObjectType> = [HKWorkoutType.workoutType()]
             healthStore.requestAuthorization(toShare: nil, read: read) { [weak self] (isGranted, error) in
