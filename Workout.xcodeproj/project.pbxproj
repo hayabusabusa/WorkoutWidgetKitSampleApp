@@ -21,6 +21,7 @@
 		7184BD7325868377005C6A5A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184BD7225868377005C6A5A /* HomeScreen.swift */; };
 		7184BD7D25868398005C6A5A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184BD7C25868398005C6A5A /* HomeViewModel.swift */; };
 		71AE2BCC2588A54B00550180 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */; };
+		71CB267A258A24F4004B8468 /* WidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB2679258A24F4004B8468 /* WidgetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		7184BD7225868377005C6A5A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7184BD7C25868398005C6A5A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		71CB2679258A24F4004B8468 /* WidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		7184BD3F25867E56005C6A5A /* WorkoutWidget */ = {
 			isa = PBXGroup;
 			children = (
+				71CB2678258A24D8004B8468 /* Model */,
 				7184BD4025867E56005C6A5A /* WorkoutWidget.swift */,
 				7184BD4225867E56005C6A5A /* Assets.xcassets */,
 				7184BD4425867E56005C6A5A /* Info.plist */,
@@ -209,6 +212,14 @@
 				71AE2BCB2588A54B00550180 /* ActivityIndicator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		71CB2678258A24D8004B8468 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71CB2679258A24F4004B8468 /* WidgetModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7184BD4125867E56005C6A5A /* WorkoutWidget.swift in Sources */,
+				71CB267A258A24F4004B8468 /* WidgetModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

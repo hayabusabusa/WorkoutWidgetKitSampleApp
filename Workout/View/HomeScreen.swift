@@ -45,7 +45,7 @@ struct HomeScreen: View {
             .padding([.top, .bottom], 12)
             .background(viewModel.isAuthorized ? Color.red.opacity(0.3) : Color.red)
             .cornerRadius(8.0)
-            .disabled(!viewModel.isAuthorized)
+            .disabled(viewModel.isAuthorized)
         }
         .padding(EdgeInsets(top: 40, leading: 24, bottom: 24, trailing: 24))
         .onAppear(perform: {
